@@ -15,20 +15,18 @@ Based on the requirements, the following tables and procedures are required to i
   * Species ID
   * Zoo ID
   * Animal Name
-  * Animal type/description
-  * Foods [could be multiple]
+  * Feeding Schedule [could be multiple]
    * - Food ID
    * - Weight to give
-   * - Schedule [could be multiple]
-    * -- Frequency: daily, days-of-week, ...
-    * -- Time of day
+   * - Frequency: daily, days-of-week, ...
+   * - Time of day
 
 - Foods
   * Food ID
-  * Weight on hand
+  * Vendor ID (for ordering)
   * Reorder Trigger Weight
   * Weight to reorder
-  * Vendor ID (for ordering)
+  * Weight on hand
 
 - [optional] Outstanding Orders
   * Vendor ID
