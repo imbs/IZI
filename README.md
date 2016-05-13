@@ -21,6 +21,12 @@ Based on the requirements, the following tables and procedures are required to i
    * - Frequency: daily, days-of-week, ...
    * - Time of day
 
+- Feedings
+  * Animal ID
+  * Food ID
+  * Date/time fed
+  * Weight given
+
 - Foods
   * Food ID
   * Vendor ID (for ordering)
@@ -32,9 +38,16 @@ Based on the requirements, the following tables and procedures are required to i
   * Vendor ID
   * Zoo ID
   * Food ID
-  * Weight ordered
   * Date/time order placed
+  * Weight ordered
   * [optional] Expected delivery date
+
+- Received Orders
+  * Vendor ID
+  * Zoo ID
+  * Food ID
+  * Date/time order received
+  * Weight received
 
 - Species
   * Species ID
