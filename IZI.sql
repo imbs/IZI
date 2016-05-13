@@ -35,13 +35,37 @@ CREATE TABLE `animals` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `animals`
+-- Table structure for table `feed_schedule`
 --
 
-LOCK TABLES `animals` WRITE;
-/*!40000 ALTER TABLE `animals` DISABLE KEYS */;
-/*!40000 ALTER TABLE `animals` ENABLE KEYS */;
-UNLOCK TABLES;
+DROP TABLE IF EXISTS `feed_schedule`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `feed_schedule` (
+  `animal_id` int(11) NOT NULL,
+  `food_id` int(11) NOT NULL,
+  `frequency` varchar(45) NOT NULL,
+  `time_of_day` time NOT NULL,
+  `amount` decimal(8,3) NOT NULL,
+  PRIMARY KEY (`animal_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `feedings`
+--
+
+DROP TABLE IF EXISTS `feedings`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `feedings` (
+  `animal_id` int(11) NOT NULL,
+  `food_id` int(11) NOT NULL,
+  `time_fed` datetime NOT NULL,
+  `amount` decimal(8,3) NOT NULL,
+  PRIMARY KEY (`animal_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `foods`
@@ -53,22 +77,14 @@ DROP TABLE IF EXISTS `foods`;
 CREATE TABLE `foods` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   `vendor_id` int(11) NOT NULL,
-  `reorder_trigger` int(11) NOT NULL,
-  `reorder_weight` int(11) NOT NULL,
-  `on_hand` int(11) NOT NULL,
+  `reorder_trigger` decimal(8,3) NOT NULL,
+  `reorder_weight` decimal(8,3) NOT NULL,
+  `on_hand` decimal(8,3) NOT NULL,
+  `description` varchar(45) NOT NULL,
   PRIMARY KEY (`ID`),
   UNIQUE KEY `ID_UNIQUE` (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `foods`
---
-
-LOCK TABLES `foods` WRITE;
-/*!40000 ALTER TABLE `foods` DISABLE KEYS */;
-/*!40000 ALTER TABLE `foods` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `species`
@@ -82,17 +98,8 @@ CREATE TABLE `species` (
   `name` varchar(45) NOT NULL,
   PRIMARY KEY (`ID`),
   UNIQUE KEY `ID_UNIQUE` (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `species`
---
-
-LOCK TABLES `species` WRITE;
-/*!40000 ALTER TABLE `species` DISABLE KEYS */;
-/*!40000 ALTER TABLE `species` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `vendors`
@@ -108,17 +115,8 @@ CREATE TABLE `vendors` (
   `phone` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`ID`),
   UNIQUE KEY `ID_UNIQUE` (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `vendors`
---
-
-LOCK TABLES `vendors` WRITE;
-/*!40000 ALTER TABLE `vendors` DISABLE KEYS */;
-/*!40000 ALTER TABLE `vendors` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `waste`
@@ -129,22 +127,12 @@ DROP TABLE IF EXISTS `waste`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `waste` (
   `food_id` int(11) NOT NULL,
-  `timestamp` datetime NOT NULL,
   `zoo_id` int(11) NOT NULL,
-  `weight` int(11) NOT NULL,
-  `wastecol` varchar(45) DEFAULT NULL,
+  `timestamp` datetime NOT NULL,
+  `amount` decimal(8,3) NOT NULL,
   PRIMARY KEY (`food_id`,`timestamp`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `waste`
---
-
-LOCK TABLES `waste` WRITE;
-/*!40000 ALTER TABLE `waste` DISABLE KEYS */;
-/*!40000 ALTER TABLE `waste` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `workers`
@@ -158,17 +146,8 @@ CREATE TABLE `workers` (
   `name` varchar(45) NOT NULL,
   PRIMARY KEY (`ID`),
   UNIQUE KEY `ID_UNIQUE` (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `workers`
---
-
-LOCK TABLES `workers` WRITE;
-/*!40000 ALTER TABLE `workers` DISABLE KEYS */;
-/*!40000 ALTER TABLE `workers` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `zoos`
@@ -183,17 +162,8 @@ CREATE TABLE `zoos` (
   `location` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`ID`),
   UNIQUE KEY `ID_UNIQUE` (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `zoos`
---
-
-LOCK TABLES `zoos` WRITE;
-/*!40000 ALTER TABLE `zoos` DISABLE KEYS */;
-/*!40000 ALTER TABLE `zoos` ENABLE KEYS */;
-UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -204,4 +174,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-05-12 14:49:47
+-- Dump completed on 2016-05-13 12:51:23
