@@ -21,6 +21,13 @@ Based on the requirements, the following tables and procedures are required to i
    * - Frequency: daily, days-of-week, ...
    * - Time of day
 
+- Feeding Schedule
+  * Animal ID
+  * Food ID
+  * Frequency
+  * Time of day to feed
+  * Weight to feed
+
 - Feedings
   * Animal ID
   * Food ID
