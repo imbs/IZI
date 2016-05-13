@@ -32,6 +32,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.actionTabControl = new System.Windows.Forms.TabControl();
             this.feedingTabPage = new System.Windows.Forms.TabPage();
+            this.feedingSaveButton = new System.Windows.Forms.Button();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.label4 = new System.Windows.Forms.Label();
             this.feedingFoodComboBox = new System.Windows.Forms.ComboBox();
             this.foodsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.iziDataSet = new IZI.iziDataSet();
@@ -40,39 +43,38 @@
             this.feedingAnimalComboBox = new System.Windows.Forms.ComboBox();
             this.animalsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.receivingTabPage = new System.Windows.Forms.TabPage();
-            this.inventoryTabPage = new System.Windows.Forms.TabPage();
-            this.reportsTabPage = new System.Windows.Forms.TabPage();
-            this.animalsTableAdapter = new IZI.iziDataSetTableAdapters.animalsTableAdapter();
-            this.foodsTableAdapter = new IZI.iziDataSetTableAdapters.foodsTableAdapter();
-            this.foodsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.label4 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.inventoryTabPage = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
             this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.reportsTabPage = new System.Windows.Forms.TabPage();
+            this.animalsTableAdapter = new IZI.iziDataSetTableAdapters.animalsTableAdapter();
+            this.foodsTableAdapter = new IZI.iziDataSetTableAdapters.foodsTableAdapter();
+            this.foodsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.label9 = new System.Windows.Forms.Label();
             this.zooChoiceComboBox = new System.Windows.Forms.ComboBox();
             this.zoosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.zoosTableAdapter = new IZI.iziDataSetTableAdapters.zoosTableAdapter();
-            this.feedingSaveButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.zoosTableAdapter1 = new IZI.iziDataSetTableAdapters.zoosTableAdapter();
+            this.animalsTableAdapter1 = new IZI.iziDataSetTableAdapters.animalsTableAdapter();
             this.actionTabControl.SuspendLayout();
             this.feedingTabPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.foodsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iziDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.animalsBindingSource)).BeginInit();
             this.receivingTabPage.SuspendLayout();
-            this.inventoryTabPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.foodsBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            this.inventoryTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.foodsBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.zoosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -115,6 +117,31 @@
             this.feedingTabPage.TabIndex = 0;
             this.feedingTabPage.Text = "Feeding";
             this.feedingTabPage.UseVisualStyleBackColor = true;
+            // 
+            // feedingSaveButton
+            // 
+            this.feedingSaveButton.Location = new System.Drawing.Point(83, 128);
+            this.feedingSaveButton.Name = "feedingSaveButton";
+            this.feedingSaveButton.Size = new System.Drawing.Size(75, 23);
+            this.feedingSaveButton.TabIndex = 6;
+            this.feedingSaveButton.Text = "&Save";
+            this.feedingSaveButton.UseVisualStyleBackColor = true;
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(83, 75);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(51, 20);
+            this.numericUpDown1.TabIndex = 5;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(25, 82);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(43, 13);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Amount";
             // 
             // feedingFoodComboBox
             // 
@@ -184,57 +211,30 @@
             this.receivingTabPage.Text = "Food Receiving";
             this.receivingTabPage.UseVisualStyleBackColor = true;
             // 
-            // inventoryTabPage
+            // button1
             // 
-            this.inventoryTabPage.Controls.Add(this.button2);
-            this.inventoryTabPage.Controls.Add(this.numericUpDown3);
-            this.inventoryTabPage.Controls.Add(this.label7);
-            this.inventoryTabPage.Controls.Add(this.comboBox2);
-            this.inventoryTabPage.Controls.Add(this.label8);
-            this.inventoryTabPage.Location = new System.Drawing.Point(4, 22);
-            this.inventoryTabPage.Name = "inventoryTabPage";
-            this.inventoryTabPage.Size = new System.Drawing.Size(478, 237);
-            this.inventoryTabPage.TabIndex = 2;
-            this.inventoryTabPage.Text = "Food Inventory";
-            this.inventoryTabPage.UseVisualStyleBackColor = true;
+            this.button1.Location = new System.Drawing.Point(83, 110);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "&Save";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // reportsTabPage
+            // numericUpDown2
             // 
-            this.reportsTabPage.Location = new System.Drawing.Point(4, 22);
-            this.reportsTabPage.Name = "reportsTabPage";
-            this.reportsTabPage.Size = new System.Drawing.Size(478, 237);
-            this.reportsTabPage.TabIndex = 3;
-            this.reportsTabPage.Text = "Reports";
-            this.reportsTabPage.UseVisualStyleBackColor = true;
+            this.numericUpDown2.Location = new System.Drawing.Point(83, 60);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(51, 20);
+            this.numericUpDown2.TabIndex = 7;
             // 
-            // animalsTableAdapter
+            // label6
             // 
-            this.animalsTableAdapter.ClearBeforeFill = true;
-            // 
-            // foodsTableAdapter
-            // 
-            this.foodsTableAdapter.ClearBeforeFill = true;
-            // 
-            // foodsBindingSource1
-            // 
-            this.foodsBindingSource1.DataMember = "foods";
-            this.foodsBindingSource1.DataSource = this.iziDataSet;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(25, 82);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 13);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Amount";
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(83, 75);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(51, 20);
-            this.numericUpDown1.TabIndex = 5;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(25, 60);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(43, 13);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Amount";
             // 
             // comboBox1
             // 
@@ -255,21 +255,28 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Food";
             // 
-            // numericUpDown2
+            // inventoryTabPage
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(83, 60);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(51, 20);
-            this.numericUpDown2.TabIndex = 7;
+            this.inventoryTabPage.Controls.Add(this.button2);
+            this.inventoryTabPage.Controls.Add(this.numericUpDown3);
+            this.inventoryTabPage.Controls.Add(this.label7);
+            this.inventoryTabPage.Controls.Add(this.comboBox2);
+            this.inventoryTabPage.Controls.Add(this.label8);
+            this.inventoryTabPage.Location = new System.Drawing.Point(4, 22);
+            this.inventoryTabPage.Name = "inventoryTabPage";
+            this.inventoryTabPage.Size = new System.Drawing.Size(478, 237);
+            this.inventoryTabPage.TabIndex = 2;
+            this.inventoryTabPage.Text = "Food Inventory";
+            this.inventoryTabPage.UseVisualStyleBackColor = true;
             // 
-            // label6
+            // button2
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(25, 60);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 13);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Amount";
+            this.button2.Location = new System.Drawing.Point(83, 108);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 12;
+            this.button2.Text = "&Save";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // numericUpDown3
             // 
@@ -306,6 +313,28 @@
             this.label8.TabIndex = 8;
             this.label8.Text = "Food";
             // 
+            // reportsTabPage
+            // 
+            this.reportsTabPage.Location = new System.Drawing.Point(4, 22);
+            this.reportsTabPage.Name = "reportsTabPage";
+            this.reportsTabPage.Size = new System.Drawing.Size(478, 237);
+            this.reportsTabPage.TabIndex = 3;
+            this.reportsTabPage.Text = "Reports";
+            this.reportsTabPage.UseVisualStyleBackColor = true;
+            // 
+            // animalsTableAdapter
+            // 
+            this.animalsTableAdapter.ClearBeforeFill = true;
+            // 
+            // foodsTableAdapter
+            // 
+            this.foodsTableAdapter.ClearBeforeFill = true;
+            // 
+            // foodsBindingSource1
+            // 
+            this.foodsBindingSource1.DataMember = "foods";
+            this.foodsBindingSource1.DataSource = this.iziDataSet;
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -334,32 +363,13 @@
             // 
             this.zoosTableAdapter.ClearBeforeFill = true;
             // 
-            // feedingSaveButton
+            // zoosTableAdapter1
             // 
-            this.feedingSaveButton.Location = new System.Drawing.Point(83, 128);
-            this.feedingSaveButton.Name = "feedingSaveButton";
-            this.feedingSaveButton.Size = new System.Drawing.Size(75, 23);
-            this.feedingSaveButton.TabIndex = 6;
-            this.feedingSaveButton.Text = "&Save";
-            this.feedingSaveButton.UseVisualStyleBackColor = true;
+            this.zoosTableAdapter1.ClearBeforeFill = true;
             // 
-            // button1
+            // animalsTableAdapter1
             // 
-            this.button1.Location = new System.Drawing.Point(83, 110);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "&Save";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(83, 108);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "&Save";
-            this.button2.UseVisualStyleBackColor = true;
+            this.animalsTableAdapter1.ClearBeforeFill = true;
             // 
             // Form1
             // 
@@ -376,17 +386,17 @@
             this.actionTabControl.ResumeLayout(false);
             this.feedingTabPage.ResumeLayout(false);
             this.feedingTabPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.foodsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iziDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.animalsBindingSource)).EndInit();
             this.receivingTabPage.ResumeLayout(false);
             this.receivingTabPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             this.inventoryTabPage.ResumeLayout(false);
             this.inventoryTabPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.foodsBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.foodsBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.zoosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -428,6 +438,8 @@
         private System.Windows.Forms.Button feedingSaveButton;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private iziDataSetTableAdapters.zoosTableAdapter zoosTableAdapter1;
+        private iziDataSetTableAdapters.animalsTableAdapter animalsTableAdapter1;
     }
 }
 
